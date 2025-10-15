@@ -1,0 +1,127 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #222;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Flexbox for navigation */
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  margin: 0;
+  list-style: none;
+  background: #444;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* CSS Grid for main layout */
+main {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Sidebar styles */
+aside {
+  background: #eee;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+/* Content section */
+.content {
+  min-width: 0;
+}
+
+/* Flexbox for cards */
+.cards {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  flex: 1 1 200px;
+  min-width: 180px;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* --- MEDIA QUERIES FOR RESPONSIVENESS --- */
+
+/* Tablet breakpoint */
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  aside {
+    margin-bottom: 1rem;
+  }
+  .cards {
+    flex-direction: column;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 600px) {
+  header {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  main {
+    padding: 1rem;
+  }
+  .card {
+    min-width: 100%;
+  }
+}
+
+/* Responsive units example */
+h1, h2 {
+  font-size: 2.5vw;
+}
+
+/* Comments for clarity:
+  - Flexbox is used for nav and cards alignment.
+  - CSS Grid is used for main layout (sidebar + content).
+  - Responsive breakpoints for tablet and mobile.
+  - Use of relative units, gap, and wrap for flexibility.
+*/
